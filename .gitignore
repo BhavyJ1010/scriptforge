@@ -37,3 +37,8 @@ dist/
 # Generated Project Outputs
 # -----------------------------
 data/processed/
+
+# -----------------------------
+# Development sample images
+# -----------------------------
+data/samples/
