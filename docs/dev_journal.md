@@ -1,55 +1,70 @@
-## Day 1
-- Revised GitHUb 
-- Learned NumPy
-- started with the CV tutorial 
+# ScriptForge Development Journal
 
-To Remember:
-- if the file name starts with t, while entering it's path \t creates problem, use \\ or /
+## Milestone 0 - Project Bootstrap
 
-## Day 2
-- Watched the whole tutorial for basic OpenCV
-- Enjoyed canny edge detection, thresholding and other stuff 
-- Started building a Master Handbook to learn CV along the way.
+### Built
+- Designed initial project architecture.
+- Initialized Git repository.
+- Connected GitHub remote.
+- Created Python virtual environment.
+- Configured .gitignore.
+- Added README and requirements.txt.
 
-## Day 3
-- Decided the pipeline of the project 
-_________________________
-ScriptForge
-│
-User Upload
-↓
-Document Preprocessing        ← CURRENT MILESTONE
-↓
-Character Segmentation
-↓
-Glyph Cleaning
-↓
-Glyph Library Builder
-↓
-Writer Profile Builder
-↓
-Layout Engine
-↓
-Handwriting Renderer
-↓
-Notebook Generator
-↓
-PNG / PDF Export
-_________________________
+### Learned
+- Git workflow
+- Virtual environments
+- Project structure
 
-Preprocessing Pipeline: 
+### Notes
+- Established package-based project layout.
 
-Read Image > Resize > Grayscale > Blur > Edge Detection > Page Detection > Perspective Transform > Lighting Normalization > Adaptive Threshold > Morphology > Scanner-like Output
+## Milestone 1 - Image Loader
 
-- Milestone 0
+### Built
+- Implemented reusable image loader.
+- Added input validation.
+- Added preprocessing loader test.
 
-Milestone 0 — Project Bootstrap
+### Learned
+- cv2.imread()
+- NumPy image representation
+- Separation of engine and tests
 
-Designed initial project architecture.
-Initialized a local Git repository.
-Connected the repository to GitHub.
-Created a Python virtual environment.
-Installed core dependencies.
-Added project README.
-Configured .gitignore.
-Generated reproducible requirements.txt.
+### Notes
+- First reusable preprocessing module completed.
+
+## Milestone 2 - Image Resize
+
+### Built
+- Implemented aspect ratio preserving resize.
+- Added configurable target width.
+- Added resize test module.
+
+### Learned
+- Aspect ratio
+- cv2.resize()
+- Running modules using `python -m`
+
+### Notes
+- Verified resize mathematically and visually.
+
+# Current Pipeline
+
+- [x] Image Loader
+- [x] Image Resize
+- [ ] Grayscale
+- [ ] Gaussian Blur
+- [ ] Edge Detection
+- [ ] Page Detection
+- [ ] Perspective Transform
+- [ ] Lighting Normalization
+- [ ] Adaptive Threshold
+- [ ] Morphology
+- [ ] Character Segmentation
+- [ ] Glyph Cleaning
+- [ ] Glyph Library Builder
+- [ ] Writer Profile Builder
+- [ ] Layout Engine
+- [ ] Handwriting Renderer
+- [ ] Notebook Generator
+- [ ] PNG/PDF Export
