@@ -63,12 +63,28 @@
 ### Notes
 - Grayscale removes the color channel while preserving image dimensions.
 
+## Milestone 4 - Gaussian Blur
+
+### Built
+- Implemented Gaussian blur module.
+- Added blur test module.
+- Verified smoothing visually.
+
+### Learned
+- cv2.GaussianBlur()
+- Kernel size
+- Gaussian weighting
+- Sigma
+
+### Notes
+- Blur reduces noise before edge detection.
+
 # Current Pipeline
 
 - [x] Image Loader
 - [x] Image Resize
 - [x] Grayscale
-- [ ] Gaussian Blur
+- [x] Gaussian Blur
 - [ ] Edge Detection
 - [ ] Page Detection
 - [ ] Perspective Transform
