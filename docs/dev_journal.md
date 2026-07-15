@@ -79,14 +79,31 @@
 ### Notes
 - Blur reduces noise before edge detection.
 
-# Current Pipeline
+## Milestone 5 - Document Contour Detection
 
+### Built
+- Implemented Canny edge detection.
+- Added morphological closing for edge refinement.
+- Implemented contour extraction and sorting.
+- Added polygon approximation.
+
+### Learned
+- Canny edge detection
+- Morphological closing
+- Contour hierarchy and area
+- Polygon approximation (approxPolyDP)
+
+### Notes
+- Clean contours require complete page boundaries.
+- This stage prepares the image for perspective correction.
+
+# Current Pipeline
 - [x] Image Loader
 - [x] Image Resize
 - [x] Grayscale
 - [x] Gaussian Blur
-- [ ] Edge Detection
-- [ ] Page Detection
+- [x] Edge Detection
+- [x] Contour Detection
 - [ ] Perspective Transform
 - [ ] Lighting Normalization
 - [ ] Adaptive Threshold
