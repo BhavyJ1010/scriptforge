@@ -2,7 +2,9 @@ import cv2
 from pathlib import Path
 
 def load_image(image_path):
-    """Load an image from disk."""
+    """
+    Load an image from disk.
+    """
 
     image_path = Path(image_path)
 

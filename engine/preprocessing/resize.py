@@ -1,6 +1,5 @@
 import cv2
 
-
 def resize_image(image, width=1000):
     """
     Resize an image while preserving aspect ratio.

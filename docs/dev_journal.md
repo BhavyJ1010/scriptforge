@@ -48,11 +48,26 @@
 ### Notes
 - Verified resize mathematically and visually.
 
+## Milestone 3 - Grayscale Conversion
+
+### Built
+- Implemented grayscale conversion module.
+- Added grayscale preprocessing test.
+- Verified image shape transformation and visual output.
+
+### Learned
+- `cv2.cvtColor()`
+- BGR → Grayscale conversion
+- Image channel representation
+
+### Notes
+- Grayscale removes the color channel while preserving image dimensions.
+
 # Current Pipeline
 
 - [x] Image Loader
 - [x] Image Resize
-- [ ] Grayscale
+- [x] Grayscale
 - [ ] Gaussian Blur
 - [ ] Edge Detection
 - [ ] Page Detection
