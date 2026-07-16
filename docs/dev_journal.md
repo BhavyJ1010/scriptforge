@@ -97,6 +97,21 @@
 - Clean contours require complete page boundaries.
 - This stage prepares the image for perspective correction.
 
+## Milestone 6 - Perspective Transform
+
+### Built
+- Implemented point ordering for document corners.
+- Implemented four-point perspective transform.
+- Added perspective transform test with contour validation.
+
+### Learned
+- Homography (cv2.getPerspectiveTransform)
+- Perspective warping (cv2.warpPerspective)
+- Importance of validating a quadrilateral before transforming.
+### Notes
+- Current implementation works when a valid 4-corner page contour is detected.
+- Robust page selection will be improved in a later iteration.
+
 # Current Pipeline
 - [x] Image Loader
 - [x] Image Resize
@@ -104,7 +119,7 @@
 - [x] Gaussian Blur
 - [x] Edge Detection
 - [x] Contour Detection
-- [ ] Perspective Transform
+- [x] Perspective Transform
 - [ ] Lighting Normalization
 - [ ] Adaptive Threshold
 - [ ] Morphology
