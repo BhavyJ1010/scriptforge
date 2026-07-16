@@ -102,7 +102,7 @@
 ### Notes
 - Current implementation uses global histogram equalization; can later be upgraded to CLAHE.
 
-## Milestone 7 - Adaptive Threshold
+## Milestone 8 - Adaptive Threshold
 ### Built
 - Implemented adaptive threshold module.
 - Added threshold preprocessing test.
@@ -112,6 +112,15 @@
 ### Notes
 - Binary conversion performs well after lighting normalization.
 
+## Milestone 9 - Unified Preprocessing Pipeline
+### Built
+- Added unified document preprocessing pipeline.
+- Added end-to-end preprocessing test.
+### Learned
+- Integrating multiple preprocessing stages into a reusable pipeline.
+- Color operations and grayscale operations require different image types.
+### Notes
+- Pipeline now returns intermediate outputs for debugging and reuse.
 
 # Current Pipeline
 - [x] Image Loader
@@ -119,11 +128,11 @@
 - [x] Grayscale
 - [x] Gaussian Blur
 - [x] Edge Detection
+- [x] Morphology
 - [x] Contour Detection
 - [x] Perspective Transform
-- [ ] Lighting Normalization
-- [ ] Adaptive Threshold
-- [ ] Morphology
+- [x] Lighting Normalization
+- [x] Adaptive Threshold
 - [ ] Character Segmentation
 - [ ] Glyph Cleaning
 - [ ] Glyph Library Builder
@@ -131,4 +140,4 @@
 - [ ] Layout Engine
 - [ ] Handwriting Renderer
 - [ ] Notebook Generator
-- [ ] PNG/PDF Export
+- [ ] PNG/PDF 
