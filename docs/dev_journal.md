@@ -102,6 +102,16 @@
 ### Notes
 - Current implementation uses global histogram equalization; can later be upgraded to CLAHE.
 
+## Milestone 7 - Adaptive Threshold
+### Built
+- Implemented adaptive threshold module.
+- Added threshold preprocessing test.
+### Learned
+- Adaptive Gaussian thresholding.
+- Local thresholding vs global thresholding.
+### Notes
+- Binary conversion performs well after lighting normalization.
+
 
 # Current Pipeline
 - [x] Image Loader
