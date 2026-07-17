@@ -135,6 +135,18 @@
 - Current implementation detects individual connected components only.
 - Character grouping and glyph extraction will be handled in later modules.
 
+## Milestone 8 - Glyph Cleaning
+### Built
+- Implemented glyph bounding-box filtering module.
+- Added configurable filtering based on width, height and area.
+- Created visualization test for cleaned glyph components.
+### Learned
+- Connected component analysis detects many tiny noise regions.
+- Simple geometric filtering removes most insignificant components before later processing.
+### Notes
+- Current cleaning is intentionally conservative.
+- Future versions can include merging broken glyphs and removing ruled notebook lines.
+
 # Current Pipeline
 - [x] Image Loader
 - [x] Image Resize
@@ -147,7 +159,7 @@
 - [x] Lighting Normalization
 - [x] Adaptive Threshold
 - [x] Initial Character Segmentation
-- [ ] Glyph Cleaning
+- [x] Glyph Cleaning
 - [ ] Glyph Library Builder
 - [ ] Writer Profile Builder
 - [ ] Layout Engine
