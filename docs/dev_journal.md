@@ -122,6 +122,19 @@
 ### Notes
 - Pipeline now returns intermediate outputs for debugging and reuse.
 
+## Milestone 8 - Initial Character Segmentation
+### Built
+- Implemented initial character segmentation module.
+- Detected connected components using contours.
+- Returned bounding boxes for each detected component.
+- Added visualization test for segmented components.
+### Learned
+- Connected components are not equivalent to complete characters.
+- Broken handwriting strokes produce multiple contours for a single glyph.
+### Notes
+- Current implementation detects individual connected components only.
+- Character grouping and glyph extraction will be handled in later modules.
+
 # Current Pipeline
 - [x] Image Loader
 - [x] Image Resize
@@ -133,7 +146,7 @@
 - [x] Perspective Transform
 - [x] Lighting Normalization
 - [x] Adaptive Threshold
-- [ ] Character Segmentation
+- [x] Initial Character Segmentation
 - [ ] Glyph Cleaning
 - [ ] Glyph Library Builder
 - [ ] Writer Profile Builder
