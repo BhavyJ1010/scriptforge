@@ -147,6 +147,20 @@
 - Current cleaning is intentionally conservative.
 - Future versions can include merging broken glyphs and removing ruled notebook lines.
 
+## Milestone 9 - Glyph Library Builder (Experimental)
+### Built
+- Implemented glyph extraction from cleaned connected components.
+- Added automatic glyph saving with configurable output directory.
+- Added padding around extracted glyphs to preserve stroke boundaries.
+- Created end-to-end extraction test from document to saved glyph images.
+### Learned
+- Connected component analysis extracts connected regions, not individual handwritten characters.
+- Notebook borders, ruled lines, and connected words frequently become single components.
+- Generic segmentation is insufficient for ScriptForge's final pipeline.
+### Notes
+- This module is retained as a generic extraction utility.
+- ScriptForge V1 will instead rely on template-guided extraction, where every character occupies a predefined cell.
+
 # Current Pipeline
 - [x] Image Loader
 - [x] Image Resize
@@ -160,7 +174,8 @@
 - [x] Adaptive Threshold
 - [x] Initial Character Segmentation
 - [x] Glyph Cleaning
-- [ ] Glyph Library Builder
+- [x] Experimental Glyph Library Builder
+- [ ] Template System
 - [ ] Writer Profile Builder
 - [ ] Layout Engine
 - [ ] Handwriting Renderer

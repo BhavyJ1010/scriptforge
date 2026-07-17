@@ -42,3 +42,19 @@ data/processed/
 # Development sample images
 # -----------------------------
 data/samples/
+
+# -----------------------------
+# Generated outputs
+# -----------------------------
+data/output/glyphs/*
+data/output/pages/*
+data/output/writer_profiles/*
+data/output/exports/*
+
+# -----------------------------
+# Keep folder structure
+# -----------------------------
+!data/output/glyphs/.gitkeep
+!data/output/pages/.gitkeep
+!data/output/writer_profiles/.gitkeep
+!data/output/exports/.gitkeep
