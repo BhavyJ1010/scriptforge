@@ -58,3 +58,8 @@ data/output/exports/*
 !data/output/pages/.gitkeep
 !data/output/writer_profiles/.gitkeep
 !data/output/exports/.gitkeep
+
+# -----------------------------
+# Folder structure file
+# -----------------------------
+folder_structure.txt
