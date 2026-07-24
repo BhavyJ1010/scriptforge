@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScriptForge - Digital Acquisition</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <header class="app-header">
+            <h1>ScriptForge</h1>
+            <p>Digital Writer Acquisition Prototype</p>
+        </header>
+
+        <section class="prompt-section">
+            <h2>Prompt</h2>
+
+            <p id="promptText">
+                The quick brown fox
+            </p>
+        </section>
+
+        <section class="canvas-section">
+
+            <canvas
+                id="drawingCanvas"
+                width="800"
+                height="400">
+            </canvas>
+
+        </section>
+
+        <section class="controls">
+
+            <button id="clearButton">
+                Clear
+            </button>
+
+            <button id="saveButton">
+                Save
+            </button>
+
+        </section>
+
+    </main>
+
+    <script src="js/canvas.js"></script>
+    <script src="js/prompts.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/exporter.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/capture.js"></script>
+
+</body>
+</html>
