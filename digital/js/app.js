@@ -42,7 +42,13 @@ function onStrokeFinished(stroke) {
     recording.strokes.push(stroke);
 }
 
-let recording = createNewRecording();
+function initializeApp() {
+
+    recording = createNewRecording();
+
+}
+
+let recording;
 
 clearButton.addEventListener("click", () => {
 
@@ -55,5 +61,17 @@ clearButton.addEventListener("click", () => {
 saveButton.addEventListener("click", () => {
 
     downloadRecording(recording);
+
+    if (nextPrompt()) {
+
+        clearCanvas();
+
+        recording = createNewRecording();
+
+    } else {
+
+        clearCanvas();
+
+    }
 
 });

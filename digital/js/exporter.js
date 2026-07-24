@@ -16,7 +16,12 @@ function downloadRecording(recording) {
     const link = document.createElement("a");
 
     link.href = url;
-    link.download = "recording.json";
+    const safePrompt = recording.prompt.text
+    .replace(/\s+/g, "_")
+    .replace(/[^a-zA-Z0-9_]/g, "");
+
+    link.download =
+        `${String(recording.prompt.id).padStart(3, "0")}_${safePrompt}.json`;
 
     link.click();
 

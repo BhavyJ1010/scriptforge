@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "version": 1,
+        "text": "The quick brown fox",
+        "category": "phrase"
+    },
+    {
+        "id": 2,
+        "version": 1,
+        "text": "beautiful",
+        "category": "word"
+    },
+    {
+        "id": 3,
+        "version": 1,
+        "text": "guitar",
+        "category": "word"
+    },
+    {
+        "id": 4,
+        "version": 1,
+        "text": "a",
+        "category": "character"
+    },
+    {
+        "id": 5,
+        "version": 1,
+        "text": "m",
+        "category": "character"
+    }
+]
