@@ -19,6 +19,8 @@ function startStroke(event) {
 
     isDrawing = true;
 
+    updatePointerType(event.pointerType || "unknown");
+
     previousX = event.offsetX;
     previousY = event.offsetY;
 
@@ -26,9 +28,18 @@ function startStroke(event) {
     strokeStartTime = performance.now();
 
     currentStroke.push({
-        x: event.offsetX,
-        y: event.offsetY,
-        t: 0
+
+    x: event.offsetX,
+    y: event.offsetY,
+    t: 0,
+
+    pressure: event.pressure ?? 0,
+
+    tilt_x: event.tiltX ?? 0,
+    tilt_y: event.tiltY ?? 0,
+
+    twist: event.twist ?? 0
+
     });
 
 }
@@ -45,9 +56,18 @@ function continueStroke(event) {
     );
 
     currentStroke.push({
-        x: event.offsetX,
-        y: event.offsetY,
-        t: performance.now() - strokeStartTime
+
+    x: event.offsetX,
+    y: event.offsetY,
+    t: performance.now() - strokeStartTime,
+
+    pressure: event.pressure ?? 0,
+
+    tilt_x: event.tiltX ?? 0,
+    tilt_y: event.tiltY ?? 0,
+
+    twist: event.twist ?? 0
+
     });
 
     previousX = event.offsetX;
@@ -60,7 +80,9 @@ function finishStroke() {
     if (!isDrawing) return;
 
     if (currentStroke.length > 0) {
+
         onStrokeFinished(currentStroke);
+
     }
 
     isDrawing = false;

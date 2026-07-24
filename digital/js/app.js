@@ -2,7 +2,13 @@
 // App
 // =======================================================
 
+let recording;
+let currentPointerType = "unknown";
+let strokeCounter = 0;
+
 function createNewRecording() {
+
+    strokeCounter = 0;
 
     return {
 
@@ -12,13 +18,13 @@ function createNewRecording() {
 
         device: {
 
-            pointer_type: "unknown",
+            pointer_type: currentPointerType,
 
             device_pixel_ratio: window.devicePixelRatio || 1,
 
-            canvas_width: canvas.width,
+            canvas_width: canvas.cssWidth,
 
-            canvas_height: canvas.height
+            canvas_height: canvas.cssHeight
 
         },
 
@@ -38,17 +44,31 @@ function createNewRecording() {
 
 }
 
-function onStrokeFinished(stroke) {
-    recording.strokes.push(stroke);
-}
-
 function initializeApp() {
 
     recording = createNewRecording();
 
 }
 
-let recording;
+function onStrokeFinished(stroke) {
+
+    strokeCounter++;
+
+    recording.strokes.push({
+
+        id: strokeCounter,
+
+        points: stroke
+
+    });
+
+}
+
+function updatePointerType(type) {
+
+    recording.device.pointer_type = type;
+
+}
 
 clearButton.addEventListener("click", () => {
 

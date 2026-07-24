@@ -11,6 +11,10 @@ const PEN_COLOR = "#000000";
 function configureCanvas() {
 
     const rect = canvas.getBoundingClientRect();
+
+    canvas.cssWidth = rect.width;
+    canvas.cssHeight = rect.height;
+    
     const dpr = window.devicePixelRatio || 1;
 
     canvas.width = rect.width * dpr;

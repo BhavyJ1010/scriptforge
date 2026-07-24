@@ -124,6 +124,11 @@ Point
   y
   t              // ms, relative to stroke start
 
+  pressure       // 0 when unavailable
+  tilt_x         // 0 when unavailable
+  tilt_y         // 0 when unavailable
+  twist          // 0 when unavailable
+
 Stroke
   id
   points[]       // list of Point
@@ -190,14 +195,18 @@ frontend) can be redesigned later without touching already-collected data.
 ## 9. V1 Scope
 
 In scope:
-- Single canvas, single prompt at a time, Pointer Events capture
+- Single canvas, prompt sequence loaded from prompts_v1.json
+- Pointer Events capture (position, time, pointer type, pressure, tilt, twist)
 - Save produces one self-contained Recording JSON, downloaded locally
 - Prompt sequence loaded from `prompts_v1.json`
 
 Explicitly out of scope for V1:
 - Backend/database storage (local file download only for now)
 - Session/Writer wiring (shapes defined, not implemented)
-- Pressure/tilt capture (fields reserved, null if unsupported)
+- Session/Writer wiring (shapes defined, not implemented)
+- Backend/database storage (local file download only for now)
+- Any ML, rendering, or replay
+- Rejected-attempt retention (only the accepted recording is saved)
 - Any ML, rendering, or replay
 - Rejected-attempt retention (only the accepted recording is saved)
 
@@ -207,7 +216,6 @@ Explicitly out of scope for V1:
 
 - Wire up Session → multiple Recordings per sitting
 - Wire up Writer → multiple Sessions over time (incremental profile growth)
-- Add `pressure`, `tilt` to Point when device support allows (nullable)
 - Adaptive/targeted prompting based on Writer Profile gaps
 - Annotation mode for character-level ground truth (V2 idea)
 - Faint ruling on canvas to reduce baseline-drift acquisition noise
